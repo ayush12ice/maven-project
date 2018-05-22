@@ -30,13 +30,13 @@ pipeline {
             parallel{
                 stage ('Deploy to Staging'){
                     steps {
-                        bat "pscp -i d:\\0training\\Jenkins\\puttykey.ppk webapp\\target\\*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
+                        bat "echo y | pscp -i d:\\0training\\Jenkins\\puttykey.ppk webapp\\target\\*.war ec2-user@${params.tomcat_dev}:/var/lib/tomcat7/webapps"
                     }
                 }
 
                 stage ("Deploy to Production"){
                     steps {
-                        bat "pscp -i d:\\0training\\Jenkins\\puttykey.ppk webapp\\target\\*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
+                        bat "echo y | pscp -i d:\\0training\\Jenkins\\puttykey.ppk webapp\\target\\*.war ec2-user@${params.tomcat_prod}:/var/lib/tomcat7/webapps"
                     }
                 }
             }
