@@ -1,3 +1,1 @@
-Hello, World! This is my Jenkins Pipeline Magic Update!Automated pipeline Yo!
-
-test this
+Hello, World, This is now a fully automated Jenkins Pipeline working with AWS EC2 tomcat instances.
